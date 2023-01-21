@@ -77,8 +77,8 @@ static const char *pavucmd[] = {"pavucontrol", NULL};
 static const char *audio_up[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL};
 static const char *audio_down[] = {"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL};
 static const char *audio_mute[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
-static const char *brightness_up[] = {"xbacklight", "-inc", "5", NULL};
-static const char *brightness_down[] = {"xbacklight", "-dec", "5", NULL};
+static const char *brightness_up[] = {"xbacklight", "-inc", "1", NULL};
+static const char *brightness_down[] = {"xbacklight", "-dec", "1", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
