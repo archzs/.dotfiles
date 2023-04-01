@@ -35,7 +35,7 @@ alias btoff='sudo systemctl stop bluetooth.service && sudo rfkill block bluetoot
 # yt-dlp
 # Convert video to mp3
 mp3 () {
-    yt-dlp -x --audio-format mp3 "$1"
+    yt-dlp -x --audio-format mp3 -o "%(playlist_index|)s%(playlist_index& - |)s%(title)s.%(ext)s" "$1"
 }
 
 # Select format of video to download
