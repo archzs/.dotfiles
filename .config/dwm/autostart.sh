@@ -11,8 +11,8 @@ memory () {
 
 wlan () {
     case "$(cat /sys/class/net/wlp3s0/operstate 2>/dev/null)" in
-    up) printf "直  $(nmcli -t -f name,device connection show --active | grep wlp3s0 | cut -d\: -f1)" ;;
-    down) printf "睊 " ;;
+    up) printf "󰖩  $(nmcli -t -f name,device connection show --active | grep wlp3s0 | cut -d\: -f1)" ;;
+    down) printf "󰖪 " ;;
     esac
 }
 
@@ -22,9 +22,9 @@ bluetooth ()
 
     if [ "$status" == "active" ]
     then
-        printf ''
+        printf ''
     else
-        printf ''
+        printf '󰂲'
     fi
 }
 
@@ -34,9 +34,9 @@ volume () {
 
     if [ "${curStatus}" = 'Mute: yes' ]
     then
-        printf "婢 $volume%%"
+        printf "󰝟  $volume%%"
     else
-        printf "墳 $volume%%"
+        printf "󰕾  $volume%%"
     fi
 }
 
