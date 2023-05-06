@@ -34,9 +34,9 @@ volume () {
 
     if [ "${curStatus}" = 'Mute: yes' ]
     then
-        printf "󰖁$volume%%"
+        printf "󰖁 $volume%%"
     else
-        printf "󰕾$volume%%"
+        printf "󰕾 $volume%%"
     fi
 }
 
